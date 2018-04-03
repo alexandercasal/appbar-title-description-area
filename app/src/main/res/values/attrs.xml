@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleDetailsAppBarLayout">
+        <attr name="titleView" format="reference"/>
+        <attr name="detailView" format="reference"/>
+    </declare-styleable>
+</resources>
