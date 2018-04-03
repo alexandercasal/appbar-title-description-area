@@ -20,6 +20,28 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
 
+            <LinearLayout
+                android:id="@+id/details_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:padding="16dp"
+                android:layout_gravity="bottom">
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/title"/>
+                <EditText
+                    android:id="@+id/et_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/description"/>
+            </LinearLayout>
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar_main"
                 android:layout_width="match_parent"
