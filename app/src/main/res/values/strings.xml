@@ -4,4 +4,33 @@
     <string name="description">Description</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
+        luctus urna. Donec vel scelerisque ligula. In sagittis ac urna non lacinia. In sed gravida erat,
+        ac volutpat nibh. Nulla iaculis magna non elit bibendum, sed commodo metus feugiat. Nulla sit
+        amet fermentum est. Curabitur faucibus aliquam pellentesque. Nunc tortor orci, interdum vel
+        consequat quis, consequat sit amet elit.\n\nDonec semper rhoncus urna, a commodo tellus semper
+        sit amet. Integer ultrices sapien vel tellus semper, vel faucibus odio scelerisque. Aenean
+        facilisis hendrerit magna, in lacinia justo bibendum vitae. Vivamus et dolor in risus
+        sollicitudin aliquam sit amet at tellus. Nam vel fringilla libero. Donec velit quam, rutrum
+        ut dictum vel, fermentum vel urna. Sed et justo tellus. Cras eget erat metus. Praesent et
+        mattis nulla. Morbi dictum nunc ac tortor rhoncus eleifend.\n\nMauris rhoncus libero ex, et
+        vulputate metus porta id. Suspendisse potenti. Nunc consectetur ligula magna, a dignissim
+        lorem scelerisque vestibulum. Donec in euismod nulla, quis molestie nibh. Ut et justo volutpat,
+        posuere lorem id, commodo justo. Phasellus eu vulputate massa. Aenean eu fringilla neque,
+        quis volutpat sem. Etiam in nisi porta, bibendum arcu et, condimentum enim. Morbi lacinia
+        faucibus justo, vel vestibulum arcu vestibulum at.\n\nDuis at diam ut massa dictum dignissim.
+        Duis blandit libero felis, eget egestas mi convallis sit amet. Nunc erat nibh, elementum non
+        condimentum in, interdum vitae nisl. Sed pretium faucibus ex volutpat viverra. Suspendisse non
+        mollis ligula. Cras fermentum aliquet placerat. Etiam fermentum erat sed lacinia pretium.
+        Aenean pulvinar odio nisi, a tempor metus aliquet blandit. In vel risus eu mi mattis tristique.
+        Maecenas id velit porta, venenatis elit vel, aliquet diam. Mauris interdum odio justo, vitae
+        posuere nibh aliquam auctor. Proin cursus elit ac leo sodales, et vehicula tortor suscipit.
+        Maecenas id neque ut risus porta dapibus.\n\nQuisque eget consectetur dui. Donec ultricies sem
+        vehicula, viverra metus vel, congue ligula. Suspendisse rutrum neque eget vehicula maximus.
+        Aliquam a gravida massa. In eget lobortis nunc. Sed laoreet, velit non molestie volutpat,
+        elit tellus facilisis eros, et interdum eros diam nec erat. Suspendisse accumsan urna quis
+        massa feugiat facilisis. Aliquam erat volutpat. Curabitur iaculis feugiat dolor, vitae maximus
+        arcu facilisis vestibulum. Morbi in mi eu dui blandit porta. Duis at libero leo. Curabitur
+        ipsum lectus, dignissim eleifend rutrum vitae, bibendum vel tortor.
+    </string>
 </resources>
