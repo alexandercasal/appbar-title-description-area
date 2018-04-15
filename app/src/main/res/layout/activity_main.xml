@@ -1,81 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/coordinator_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.alexandercasal.fadingedittextappbar.TitleDetailsAppBarLayout
-        android:id="@+id/appbar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleView="@+id/toolbar_title"
-        app:detailView="@+id/details_linear_layout">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.alexandercasal.fadingedittextappbar.PageViewModel"/>
+        <variable
+            name="titleTextWatcher"
+            type="android.text.TextWatcher"/>
+    </data>
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:titleEnabled="false">
-
-            <LinearLayout
-                android:id="@+id/details_linear_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="?attr/actionBarSize"
-                android:padding="16dp"
-                android:layout_gravity="bottom">
-
-                <EditText
-                    android:id="@+id/et_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/AppTheme.ToolbarEditText"
-                    android:hint="@string/title"
-                    android:inputType="text"
-                    android:textSize="24sp" />
-                <EditText
-                    android:id="@+id/et_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/AppTheme.ToolbarEditText"
-                    android:hint="@string/description"
-                    android:inputType="text"/>
-            </LinearLayout>
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_main"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                android:background="@color/colorPrimary"
-                app:layout_collapseMode="pin">
-
-                <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    tools:text="Title"/>
-            </android.support.v7.widget.Toolbar>
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </com.alexandercasal.fadingedittextappbar.TitleDetailsAppBarLayout>
-
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/nested_scroll_view"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <TextView
+        tools:context=".MainActivity">
+
+        <com.alexandercasal.fadingedittextappbar.TitleDetailsAppBarLayout
+            android:id="@+id/appbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@string/lorem_ipsum"/>
-    </android.support.v4.widget.NestedScrollView>
-</android.support.design.widget.CoordinatorLayout>
+            app:titleView="@+id/toolbar_title"
+            app:detailView="@+id/details_linear_layout">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <LinearLayout
+                    android:id="@+id/details_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:padding="16dp"
+                    android:layout_gravity="bottom">
+
+                    <EditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/AppTheme.ToolbarEditText"
+                        android:hint="@string/title"
+                        android:inputType="text"
+                        android:textSize="24sp"
+                        app:onTextChanged="@{titleTextWatcher}"/>
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/AppTheme.ToolbarEditText"
+                        android:hint="@string/description"
+                        android:inputType="text"/>
+                </LinearLayout>
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:background="@color/colorPrimary"
+                    app:layout_collapseMode="pin">
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@{viewModel.title}"
+                        tools:text="Title"/>
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </com.alexandercasal.fadingedittextappbar.TitleDetailsAppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/lorem_ipsum"/>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
